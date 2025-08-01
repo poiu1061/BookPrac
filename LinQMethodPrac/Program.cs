@@ -165,6 +165,13 @@ namespace LinQMethodPrac
             #endregion
 
             #region 확장 메서드 체이닝(method Chaining)
+            List<string> names = new List<string> { ".NET", "C#", "TypeScript"};
+
+            var results = names.Where(name => name.Length > 2).OrderBy(n => n);
+            foreach(string u in results)
+            {
+                Console.WriteLine(u);
+            }
 
             #endregion
         }
