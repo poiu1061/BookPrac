@@ -164,6 +164,8 @@ namespace LinQMethodPrac
             }
             #endregion
 
+
+            Console.WriteLine("===================================");
             #region 확장 메서드 체이닝(method Chaining)
             List<string> names = new List<string> { ".NET", "C#", "TypeScript"};
 
@@ -173,6 +175,87 @@ namespace LinQMethodPrac
                 Console.WriteLine(u);
             }
 
+
+            var ints = Enumerable.Range(50, 150);
+
+            var result2 = ints.Where(num => num % 3 == 0 && num > 100).Skip(10).Take(20).OrderBy(num => num);
+            foreach(int a in result2)
+            {
+                Console.WriteLine(a);
+            }
+
+            Dictionary<string, int> values = new Dictionary<string, int>();
+            values.Add("Mouse", 30);
+            values.Add("Horse", 200);
+            values.Add("Tiger", 400);
+            values.Add("Lion", 400);
+            values.Add("Gireff", 700);
+            values.Add("Cow", 150);
+
+            var animals = values.Where(ani => ani.Value > 240).OrderByDescending(value =>value.Value);
+            var animals2 = values.Where(ani => ani.Value > 240);
+
+            foreach (var hei in animals)
+            {
+                Console.WriteLine(hei);
+            }
+
+            foreach (var hei2 in animals2)
+            {
+                Console.WriteLine(hei2);
+            }
+            Console.WriteLine("===================================");
+
+
+            var colors2 = new List<string>
+            {
+                "Red", "Green", "Blue", "Yellow", "Orange", "Purple", "Pink", "Brown", "Black", "White",
+                "Gray", "Cyan", "Magenta", "Lime", "Maroon", "Navy", "Olive", "Teal", "Turquoise", "Violet",
+                "Gold", "Silver", "Beige", "Coral", "Crimson", "Indigo", "Ivory", "Khaki", "Lavender", "Lilac",
+                "Mint", "Mustard", "Peach", "Plum", "Rose", "Ruby", "Salmon", "Sapphire", "Scarlet", "Tan",
+                "Amber", "Azure", "Bronze", "Charcoal", "Emerald", "Jade", "Onyx", "Pearl", "Topaz", "Zaffre"
+            };
+
+            var result3 = colors2.Where(col => col.Contains('e')).OrderBy(col2 =>col2).Reverse().Take(20);
+
+            foreach(string c in result3)
+            {
+                Console.WriteLine(c);
+            }
+
+
+            Console.WriteLine("===================================");
+            #endregion
+
+            #region LinQ에서 지원하는 쿼리구문
+            int[] random = { 3, 2, 1, 5, 4 };
+
+            //메서드 구문
+            IEnumerable<int> data3 = random.Where(num => num % 2 == 1).OrderBy(num => num);
+            foreach(int m in data3)
+            {
+                Console.WriteLine(m);
+            }
+
+            IEnumerable<int> query =
+                from num in random
+                where num % 2 == 1
+                orderby num
+                select num;
+
+            foreach(int n in query)
+            {
+                Console.WriteLine(n);
+            }
+
+            Console.WriteLine("===================================");
+
+            var numbes = numbers.Select(it => it * it);
+
+            foreach(int b in numbes)
+            {
+                Console.WriteLine(b);
+            }
             #endregion
         }
     }
