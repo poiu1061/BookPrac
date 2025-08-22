@@ -67,6 +67,60 @@ namespace PropertyPrac
 
 
             #endregion
+
+            #region 개체를 초기화시키는 3가지방법
+            //속성 사용
+            Person2 pp = new Person2();
+            pp.Name = "백두산";
+            pp.Age = 100;
+
+            //생성자 사용
+            Person2 pp2 = new Person2("홍길동",21);
+
+            //개체 이니셜라이저 사용
+            Person2 pp3 = new Person2 { Name = "임꺽정", Age = 30 };
+
+            #endregion
+
+            #region 속성의 유효성검사 구현하기
+            Car3 car3 = new Car3("자동차");
+            Console.WriteLine(car3.name);
+
+            //예외발생
+            //Console.WriteLine((new Car3("").name));
+            #endregion
+
+            #region 속성값 초기화하기
+            Pet pet = new Pet();
+            pet.Weight = 50;
+            pet.Feed(10);
+            Console.WriteLine(pet.Weight);
+            #endregion
+
+            #region 속성 선언과 동시에 초기화하기
+            var fish = new Fish();
+            fish.Weight = 10;
+            fish.Feed(15);
+            Console.WriteLine(fish.Weight);
+            #endregion
+
+            #region 속성에서 ?와 ??연산자를 함께 사용하기
+            // ?.(null  조건 연산자) ??(널 병합 연산자)
+            //var people = new Person[] { new Person { Name = "RedPlus" }, null };
+
+            //ProcessPeople(people);
+
+            //void ProcessPeople(IEnumerable<Person> peopleArray)
+            //{
+            //    foreach (var person2 in peopleArray)
+            //    {
+            //        //1: ?.로 null을 확인하여 null이면 ?? 이후의 문자열로 초기화
+            //        Console.WriteLine($"{person2?.Name ?? "아무개"}은(는)"
+            //            +$"{person2?.A?.Street ?? "아무곳"}에 삽니다"
+            //            );
+            //    }
+            //}
+            #endregion
         }
 
         class Developer
@@ -165,5 +219,24 @@ namespace PropertyPrac
 
         }
         #endregion
+
+        #region 개체를 초기화하는 세가지 방법
+        public class Person2
+        {
+            public string Name { get; set; }
+            public int Age { get; set; }
+
+            public Person2()
+            {
+
+            }
+            public Person2(string name, int age)
+            {
+                Name = name; Age = age;
+            }
+        }
+
+       
+            #endregion
     }
 }
