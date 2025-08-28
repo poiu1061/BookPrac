@@ -35,7 +35,7 @@ namespace InterfacePrac
     }
     #endregion
 
-    #region 생성잗의 매개변수에 인터페이스 사용하기
+    #region 생성자의 매개변수에 인터페이스 사용하기
     interface IBattery
     {
         string GetName();
@@ -142,7 +142,7 @@ namespace InterfacePrac
 
     internal class Program
     {
-       
+
         static void Main(string[] args)
         {
             #region 인터페이스로 특정 멤버가 반드시 구현되어야 함을 보증하기
@@ -172,7 +172,7 @@ namespace InterfacePrac
             ((IPuppy)pet).Eat(); //pet 개체를 IPuppy 형식으로 변환
             ((ICat)pet).Eat();   //pet 개체를 ICat 형식으로 변환
 
-            IPuppy puppy= new Pet();
+            IPuppy puppy = new Pet();
             puppy.Eat();
             ICat cat = new Pet();
             cat.Eat();
@@ -181,7 +181,7 @@ namespace InterfacePrac
             #region .net에 내장된 IEnumerator 인터페이스 사용하기
             string[] names = { "닷넷코리아", "비주얼아카데미" };
 
-            foreach(string name in names)
+            foreach (string name in names)
             {
                 Console.WriteLine(name);
             }
