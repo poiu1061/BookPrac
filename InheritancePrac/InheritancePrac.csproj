@@ -4,18 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5891946A-7AA5-423E-8965-E6D55DB7405D}</ProjectGuid>
+    <ProjectGuid>{4ECD638C-AA1C-4F5C-B849-E12585DB5224}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ClassPrac</RootNamespace>
-    <AssemblyName>ClassPrac</AssemblyName>
+    <RootNamespace>InheritancePrac</RootNamespace>
+    <AssemblyName>InheritancePrac</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
-<PropertyGroup>
-  <LangVersion>latest</LangVersion>
-</PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>

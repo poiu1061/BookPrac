@@ -4,18 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5891946A-7AA5-423E-8965-E6D55DB7405D}</ProjectGuid>
+    <ProjectGuid>{F800F64B-9837-4698-8AC1-E81D02D0DD56}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ClassPrac</RootNamespace>
-    <AssemblyName>ClassPrac</AssemblyName>
+    <RootNamespace>MethodOverridePractice</RootNamespace>
+    <AssemblyName>MethodOverridePractice</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
-<PropertyGroup>
-  <LangVersion>latest</LangVersion>
-</PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
